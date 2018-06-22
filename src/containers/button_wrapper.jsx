@@ -10,6 +10,9 @@ class ButtonWrapper extends Component {
   render() {
     return(
       <div className="button-wrapper">
+
+        { this.props.currentNumber }
+
         <Button value="1" selectNumber={ this.props.selectNumber }/>
         <Button value="2" selectNumber={ this.props.selectNumber }/>
         <Button value="3" selectNumber={ this.props.selectNumber }/>
@@ -19,7 +22,7 @@ class ButtonWrapper extends Component {
 }
 
 function mapStateToProps(state) {
-  return {};
+  return { currentNumber: state.currentNumber };
 }
 
 function mapDispatchToProps(dispatch) {
