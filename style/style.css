@@ -3,3 +3,9 @@
   height: 500px;
   width: 500px;
 }
+
+.button {
+  border: 1px solid lightblue;
+  height: 50px;
+  width: 50px;
+}
