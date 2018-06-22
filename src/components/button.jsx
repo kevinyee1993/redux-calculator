@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-const Button = ({ value }) => {
+const Button = ({ value, selectNumber }) => {
   return(
-    <div className="button">
+    <div className="button" onClick={ () => selectNumber(value) }>
       { value }
     </div>
   );
