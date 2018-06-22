@@ -7,15 +7,21 @@ import { bindActionCreators } from 'redux';
 
 
 class ButtonWrapper extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { currentNumber: "" };
+  }
+
   render() {
     return(
       <div className="button-wrapper">
 
         { this.props.currentNumber }
 
-        <Button value="1" selectNumber={ this.props.selectNumber }/>
-        <Button value="2" selectNumber={ this.props.selectNumber }/>
-        <Button value="3" selectNumber={ this.props.selectNumber }/>
+        <Button value="1" selectNumber={ this.props.selectNumber } currentNumber={ this.props.currentNumber }/>
+        // <Button value="2" selectNumber={ this.props.selectNumber } currentNumber={ this.props.currentNumber }/>
+        // <Button value="3" selectNumber={ this.props.selectNumber } currentNumber={ this.props.currentNumber }/>
       </div>
     );
   }
