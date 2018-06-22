@@ -10,7 +10,6 @@ class ButtonWrapper extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { currentNumber: "" };
   }
 
   render() {
@@ -28,7 +27,7 @@ class ButtonWrapper extends Component {
 }
 
 function mapStateToProps(state) {
-  return { currentNumber: state.currentNumber };
+  return { currentNumber: state.currentNumber.currentNumber };
 }
 
 function mapDispatchToProps(dispatch) {
