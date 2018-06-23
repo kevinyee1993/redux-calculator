@@ -7,7 +7,7 @@ export default function(state = INITIAL_STATE, action) {
 
       // ...state makes shallow copy of it and then what comes after the
       // comma updates the piece of the state that you wanna update
-      return {...state, currentNumber: action.payload};;
+      return {...state, currentNumber: action.payload};
 
       // return action.payload;
   }

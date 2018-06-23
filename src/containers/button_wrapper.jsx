@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+
 import Button from '../components/button';
+import OperationButton from '../components/operation_button';
 
 import { connect } from 'react-redux';
 import { selectNumber } from '../actions/index';
@@ -21,6 +23,7 @@ class ButtonWrapper extends Component {
         <Button value="1" selectNumber={ this.props.selectNumber } currentNumber={ this.props.currentNumber }/>
         // <Button value="2" selectNumber={ this.props.selectNumber } currentNumber={ this.props.currentNumber }/>
         // <Button value="3" selectNumber={ this.props.selectNumber } currentNumber={ this.props.currentNumber }/>
+        <OperationButton value="+"/>
       </div>
     );
   }
