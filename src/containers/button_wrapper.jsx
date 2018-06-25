@@ -22,7 +22,9 @@ export default class ButtonWrapper extends Component {
     return(
       <div className="button-wrapper">
         This is button wrapper
-        { numberButtons }
+        <div className="number-buttons-container">
+          { numberButtons }
+        </div>
         <OperationButton />
       </div>
     );

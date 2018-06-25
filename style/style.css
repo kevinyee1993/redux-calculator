@@ -4,6 +4,10 @@
   width: 500px;
 }
 
+.number-buttons-container {
+  display: flex;
+}
+
 
 .button {
   border: 1px solid lightblue;
