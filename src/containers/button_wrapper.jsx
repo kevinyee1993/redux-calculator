@@ -15,9 +15,16 @@ export default class ButtonWrapper extends Component {
 
   }
 
+  createOperationButtons() {
+    const operations = ['+', '-', '/', '*'];
+
+    return operations.map( operation => <OperationButton value={ operation }/> );
+  }
+
   render() {
 
     const numberButtons = this.createNumberButtons();
+    const operationButtons = this.createOperationButtons();
 
     return(
       <div className="button-wrapper">
@@ -25,7 +32,10 @@ export default class ButtonWrapper extends Component {
         <div className="number-buttons-container">
           { numberButtons }
         </div>
-        <OperationButton />
+
+        <div className="operation-buttons-container">
+          { operationButtons }
+        </div>
       </div>
     );
   }

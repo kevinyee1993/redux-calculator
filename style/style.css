@@ -8,11 +8,16 @@
   display: flex;
 }
 
+.operation-buttons-container {
+  margin-top: 40px;
+}
+
 
 .button {
   border: 1px solid lightblue;
   height: 50px;
   width: 50px;
+  padding: 10px 0 0 18px;
 }
 
 .display {

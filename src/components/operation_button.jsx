@@ -5,7 +5,7 @@ export default class OperationButton extends Component {
 
     return(
       <div className="button">
-        op
+        { this.props.value }
       </div>
     );
   }
