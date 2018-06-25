@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 
-export default class NumberButton extends Component {
+export default class OperationButton extends Component {
   render() {
-    return (
+
+    return(
       <div className="button">
-        num
+        op
       </div>
     );
   }

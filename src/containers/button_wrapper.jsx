@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import NumberButton from '../components/number_button';
+import OperationButton from '../components/operation_button';
 
-//
-
-export default class NumberButtonWrapper extends Component {
+export default class ButtonWrapper extends Component {
 
   constructor(props) {
     super(props);
@@ -11,9 +10,10 @@ export default class NumberButtonWrapper extends Component {
 
   render() {
     return(
-      <div className="number-button-wrapper">
-        This is number button wrapper
+      <div className="button-wrapper">
+        This is button wrapper
         <NumberButton />
+        <OperationButton />
       </div>
     );
   }
