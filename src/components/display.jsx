@@ -6,7 +6,6 @@ class Display extends Component {
   render() {
     return(
       <div className="display">
-        { console.log(this.props.numbers.currentNumber) }
         { this.props.numbers.currentNumber }
       </div>
     );

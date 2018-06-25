@@ -1,5 +1,5 @@
 const NUM_SELECTED = 'NUM_SELECTED';
-const INITIAL_STATE = { currentNumber: "asd", previousNumber: "" };
+const INITIAL_STATE = { currentNumber: "0", previousNumber: "" };
 
 export default function(state=INITIAL_STATE, action) {
   switch(action.type) {
