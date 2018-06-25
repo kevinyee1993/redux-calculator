@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NumberButton from './number_button_container';
-import OperationButton from '../components/operation_button';
+// import OperationButton from '../components/operation_button';
+import OperationButton from './operation_button_container';
 
 export default class ButtonWrapper extends Component {
 
@@ -11,14 +12,14 @@ export default class ButtonWrapper extends Component {
   createNumberButtons() {
     const numbers = [0,1,2,3,4,5,6,7,8,9];
 
-    return numbers.map( number => <NumberButton value={ number }/> );
+    return numbers.map( number => <NumberButton key={ number } value={ number }/> );
 
   }
 
   createOperationButtons() {
     const operations = ['+', '-', '/', '*'];
 
-    return operations.map( operation => <OperationButton value={ operation }/> );
+    return operations.map( operation => <OperationButton key={ operation }value={ operation }/> );
   }
 
   render() {

@@ -5,3 +5,11 @@ export function selectNum(num) {
     payload: num
   };
 }
+
+export function selectOperation(operation) {
+  console.log(operation);
+  return {
+    type: 'OPERATION_SELECTED',
+    payload: operation
+  };
+}
