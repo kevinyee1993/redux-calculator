@@ -1,3 +1,25 @@
+import React, { Component } from 'react';
+
+
+
+export default class NumberButtonWrapper extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return(
+      <div className="number-button-wrapper">
+        Helo
+      </div>
+    );
+  }
+}
+
+
+/* just reference to spread operator and setting initial state
+
 // const INITIAL_STATE = { currentNumber: "", previousNumber: "", operation: "" };
 //
 // // export default function(state = "", action) {
@@ -14,3 +36,7 @@
 //
 //   return state;
 // }
+
+
+
+*/

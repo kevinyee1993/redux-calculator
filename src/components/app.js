@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import ButtonWrapper from '../containers/button_wrapper';
+import NumberButtonWrapper from '../containers/number_button_wrapper';
+import Display from './display';
+
 
 export default class App extends Component {
   render() {
     return (
-      <ButtonWrapper />
+      <div>
+        <Display />
+        <NumberButtonWrapper />
+      </div>
     );
   }
 }

@@ -1,4 +1,4 @@
-.button-wrapper {
+.number-button-wrapper {
   border: 1px solid black;
   height: 500px;
   width: 500px;
@@ -8,4 +8,13 @@
   border: 1px solid lightblue;
   height: 50px;
   width: 50px;
+}
+
+.display {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  border: 1px solid black;
+  height: 50px;
+  width: 500px;
 }
