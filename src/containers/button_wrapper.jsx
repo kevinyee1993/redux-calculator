@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NumberButton from '../components/number_button';
+import NumberButton from './number_button_container';
 import OperationButton from '../components/operation_button';
 
 export default class ButtonWrapper extends Component {
