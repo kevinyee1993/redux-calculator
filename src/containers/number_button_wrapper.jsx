@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import NumberButton from '../components/number_button';
 
-
+//
 
 export default class NumberButtonWrapper extends Component {
 
@@ -11,7 +12,8 @@ export default class NumberButtonWrapper extends Component {
   render() {
     return(
       <div className="number-button-wrapper">
-        Helo
+        This is number button wrapper
+        <NumberButton />
       </div>
     );
   }
