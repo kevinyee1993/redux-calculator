@@ -20,6 +20,15 @@
   padding: 10px 0 0 18px;
 }
 
+.selected-button {
+  border: 1px solid lightblue;
+  height: 50px;
+  width: 50px;
+  padding: 10px 0 0 18px;
+  transition: 0.3s;
+  background-color: yellow;
+}
+
 .display {
   display: flex;
   justify-content: flex-end;
