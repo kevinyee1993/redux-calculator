@@ -1,7 +1,7 @@
 const OPERATION_SELECTED = 'OPERATION_SELECTED';
-const INITIAL_STATE = { operation: '' };
+// const INITIAL_STATE = { operation: '' };
 
-export default function(state=INITIAL_STATE, action) {
+export default function(state='', action) {
   switch(action.type) {
     case OPERATION_SELECTED:
       // let updatedValue;

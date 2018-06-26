@@ -24,8 +24,10 @@ class Display extends Component {
 }
 
 const mapStateToProps = (state) => {
+
   return {
-    numbers: state.numbers
+    numbers: state.numbers,
+    operation: state.operation
   };
 };
 
