@@ -16,7 +16,7 @@ export default class ButtonWrapper extends Component {
   }
 
   createOperationButtons() {
-    const operations = ['+', '-', '/', '*'];
+    const operations = ['+', '-', '/', '*', '='];
 
     return operations.map( operation => <OperationButton key={ operation }value={ operation }/> );
   }

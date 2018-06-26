@@ -14,7 +14,10 @@ export default class OperationButton extends Component {
 
     return(
       <div className={ toggleClass }
-        onClick={ () => this.props.selectOperation(this.props.value) }>
+        onClick={ () => this.props.selectOperation(this.props.value,
+        this.props.previousNumber,
+        this.props.currentNumber) }>
+        
         { this.props.value }
         { this.props.currentNumber }
       </div>
