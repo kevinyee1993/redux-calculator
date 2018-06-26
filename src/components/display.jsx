@@ -3,10 +3,21 @@ import { connect } from 'react-redux';
 
 
 class Display extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { totalNumber: 0 };
+  }
+
+  // { this.props.numbers.currentNumber }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({ totalNumber: nextProps.numbers.currentNumber });
+  }
+
   render() {
     return(
       <div className="display">
-        { this.props.numbers.currentNumber }
+        { this.state.totalNumber }
       </div>
     );
   }

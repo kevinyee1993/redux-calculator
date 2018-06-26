@@ -6,16 +6,11 @@ export function selectNum(num) {
   };
 }
 
-export function selectOperation(operation, prevNum, currNum) {
+export function selectOperation(operation) {
   console.log(operation);
-  console.log(prevNum);
-  console.log(currNum);
   return {
     type: 'OPERATION_SELECTED',
-    // payload: operation
-    payload: { operation: operation,
-               prevNum: prevNum,
-               currNum: currNum }
+    payload: operation
   };
 }
 

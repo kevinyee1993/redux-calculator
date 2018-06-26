@@ -7,6 +7,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
+        <h1>Don't have to get it perfect just have to get it done</h1>
         <Display />
         <ButtonWrapper />
       </div>
