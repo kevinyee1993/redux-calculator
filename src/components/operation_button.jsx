@@ -16,6 +16,7 @@ export default class OperationButton extends Component {
       <div className={ toggleClass }
         onClick={ () => this.props.selectOperation(this.props.value) }>
         { this.props.value }
+        { this.props.currentNumber }
       </div>
     );
   }

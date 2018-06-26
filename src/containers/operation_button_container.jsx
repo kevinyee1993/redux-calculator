@@ -5,7 +5,9 @@ import { selectOperation } from '../actions/index';
 
 const mapStateToProps = (state) => {
   return {
-    operation: state.operation
+    operation: state.operation,
+    currentNumber: state.numbers.currentNumber,
+    previousNumber: state.numbers.previousNumber
   };
 };
 
