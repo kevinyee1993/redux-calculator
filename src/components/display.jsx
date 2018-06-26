@@ -1,18 +1,33 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { selectNum } from '../actions/index';
+import { bindActionCreators } from 'redux';
 
 
 class Display extends Component {
   constructor(props) {
     super(props);
-    this.state = { totalNumber: 0 };
+    this.state = { totalNumber: "0", operation: "" };
   }
 
   // { this.props.numbers.currentNumber }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({ totalNumber: nextProps.numbers.currentNumber });
+
+    if(nextProps.operation === '+') {
+      console.log("hello i am a chimbins");
+    }
+
+    let totalNumber = this.state.totalNumber.concat(nextProps.numbers.currentNumber);
+    if(totalNumber[0] === '0') {
+      totalNumber = totalNumber.slice(1);
+    }
+
+
+    this.setState({ totalNumber: totalNumber,
+                    operation: nextProps.operation });
   }
+
 
   render() {
     return(
@@ -31,4 +46,8 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(Display);
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({ selectNum: selectNum }, dispatch);
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Display);
