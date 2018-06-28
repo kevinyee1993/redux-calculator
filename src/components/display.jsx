@@ -14,14 +14,14 @@ class Display extends Component {
 
   // { this.props.numbers.currentNumber }
 
-  componentWillReceiveProps(nextProps) {
-    let newNumber = this.state.totalNumber.concat(nextProps.numbers.currentNumber);
-    if(newNumber[0] === '0') {
-      newNumber = newNumber.slice(1);
-    }
-
-    this.setState({ totalNumber: newNumber });
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   let newNumber = this.state.totalNumber.concat(nextProps.numbers.currentNumber);
+  //   if(newNumber[0] === '0') {
+  //     newNumber = newNumber.slice(1);
+  //   }
+  //
+  //   this.setState({ totalNumber: newNumber });
+  // }
 
 
   render() {
