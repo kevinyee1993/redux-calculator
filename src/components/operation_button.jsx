@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 export default class OperationButton extends Component {
 
+  switcheroo(currentNumber, previousNumber) {
+
+  }
 
   render() {
     let toggleClass;
@@ -14,7 +17,7 @@ export default class OperationButton extends Component {
 
     return(
       <div className={ toggleClass }
-        onClick={ () => this.props.selectOperation(this.props.value) }>
+        onClick={ () => this.props.selectOperation(this.props.value, "5", "10") }>
 
         { this.props.value }
       </div>

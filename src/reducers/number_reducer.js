@@ -1,10 +1,13 @@
 const NUM_SELECTED = 'NUM_SELECTED';
+const OPERATION_SELECTED = 'OPERATION_SELECTED';
 const INITIAL_STATE = { currentNumber: "0", previousNumber: "" };
 
 export default function(state=INITIAL_STATE, action) {
   switch(action.type) {
     case NUM_SELECTED:
       return { ...state, currentNumber: action.payload };
+    case OPERATION_SELECTED:
+      return { ...state, currentNumber: action.payload.currentNumber, previousNumber: action.payload.previousNumber }
   }
 
   return state;
