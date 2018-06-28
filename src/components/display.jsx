@@ -7,32 +7,29 @@ import { bindActionCreators } from 'redux';
 class Display extends Component {
   constructor(props) {
     super(props);
-    this.state = { totalNumber: "0", operation: "" };
+    this.state = { totalNumber: "0",
+      operation: "",
+      operationPressed: false};
   }
 
   // { this.props.numbers.currentNumber }
 
   componentWillReceiveProps(nextProps) {
-
-    if(nextProps.operation === '+') {
-      console.log("hello i am a chimbins");
+    let newNumber = this.state.totalNumber.concat(nextProps.numbers.currentNumber);
+    if(newNumber[0] === '0') {
+      newNumber = newNumber.slice(1);
     }
 
-    let totalNumber = this.state.totalNumber.concat(nextProps.numbers.currentNumber);
-    if(totalNumber[0] === '0') {
-      totalNumber = totalNumber.slice(1);
-    }
-
-
-    this.setState({ totalNumber: totalNumber,
-                    operation: nextProps.operation });
+    this.setState({ totalNumber: newNumber });
   }
 
 
   render() {
+    // { this.state.totalNumber }
+
     return(
       <div className="display">
-        { this.state.totalNumber }
+        { this.props.numbers.currentNumber }
       </div>
     );
   }
