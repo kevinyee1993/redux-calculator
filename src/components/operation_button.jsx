@@ -18,7 +18,6 @@ export default class OperationButton extends Component {
     let currToInt = parseInt(currentNumber);
     let answer;
 
-
     if(prevToInt) {
       switch(operation) {
         case '+':
@@ -35,7 +34,7 @@ export default class OperationButton extends Component {
           break;
       }
     } else {
-      console.log(prevToInt + currToInt);
+      // console.log(prevToInt + currToInt);
       return currToInt.toString();
     }
 
@@ -55,7 +54,7 @@ export default class OperationButton extends Component {
       toggleClass = 'button';
     }
 
-    updatedValue = this.calculate(this.props.previouNumber,
+    updatedValue = this.calculate(this.props.previousNumber,
       this.props.currentNumber,
       this.props.operation);
 

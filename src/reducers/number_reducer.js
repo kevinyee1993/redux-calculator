@@ -7,8 +7,9 @@ export default function(state=INITIAL_STATE, action) {
     case NUM_SELECTED:
       return { ...state, currentNumber: action.payload };
     case OPERATION_SELECTED:
-      console.log(action.payload.currentNumber);
+      console.log(action.payload.previousNumber);
       return { ...state, currentNumber: action.payload.currentNumber, previousNumber: action.payload.previousNumber }
+      // return Object.assign({ currentNumber: action.payload.currentNumber, previousNumber: action.payload.previousNumber }, state)
   }
 
   return state;
