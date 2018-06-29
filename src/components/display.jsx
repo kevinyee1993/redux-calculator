@@ -7,9 +7,9 @@ import { bindActionCreators } from 'redux';
 class Display extends Component {
   constructor(props) {
     super(props);
-    this.state = { totalNumber: "0",
-      operation: "",
-      operationPressed: false};
+    // this.state = { totalNumber: "0",
+    //   operation: "",
+    //   operationPressed: false};
   }
 
   // { this.props.numbers.currentNumber }

@@ -16,15 +16,30 @@ export default class OperationButton extends Component {
 
     let prevToInt = parseInt(previousNumber);
     let currToInt = parseInt(currentNumber);
+    let answer;
 
-    console.log(prevToInt);
-    console.log(currToInt);
 
     if(prevToInt) {
-      return (prevToInt + currToInt).toString();
+      switch(operation) {
+        case '+':
+          answer = (prevToInt + currToInt).toString();
+          break;
+        case '-':
+          answer = (prevToInt - currToInt).toString();
+          break;
+        case '/':
+          answer = (prevToInt / currToInt).toString();
+          break;
+        case '*':
+          answer = (prevToInt * currToInt).toString();
+          break;
+      }
     } else {
+      console.log(prevToInt + currToInt);
       return currToInt.toString();
     }
+
+    return answer;
   }
 
   // need to somehow update prevNum to currNum after operation button is pressed

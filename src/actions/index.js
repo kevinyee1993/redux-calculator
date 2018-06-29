@@ -8,8 +8,7 @@ export function selectNum(num) {
 
 export function selectOperation(operation, currentNumber, previousNumber) {
   console.log(operation);
-  console.log(currentNumber);
-  console.log(previousNumber);
+
   return {
     type: 'OPERATION_SELECTED',
     // payload: operation

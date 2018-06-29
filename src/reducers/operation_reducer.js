@@ -15,7 +15,7 @@ export default function(state='', action) {
       // }
 
       // return { ...state, operation: action.payload.operation};
-      return action.payload;
+      return action.payload.operation;
   }
 
   return state;
