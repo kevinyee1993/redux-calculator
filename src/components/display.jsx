@@ -25,7 +25,6 @@ class Display extends Component {
 
 
   render() {
-    // { this.state.totalNumber }
 
     return(
       <div className="display">
