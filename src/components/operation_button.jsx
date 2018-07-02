@@ -33,23 +33,30 @@ export default class OperationButton extends Component {
     let currToInt = parseInt(currentNumber);
     let answer;
 
+
+    // KIND OF WORKING ON WHAT TO DO WITH SET STATE
+
+
     // if(prevToInt) {
       switch(operation) {
         case '+':
           answer = (prevToInt + currToInt).toString();
+          this.setState({ operation: "+" });
           break;
         case '-':
           answer = (prevToInt - currToInt).toString();
+          this.setState({ operation: "-" });
           break;
         case '/':
           answer = (prevToInt / currToInt).toString();
+          this.setState({ operation: "/" });
           break;
         case '*':
           answer = (prevToInt * currToInt).toString();
+          this.setState({ operation: "*" });
           break;
         case '=':
-          // answer = "big farter";
-          answer = currToInt.toString();
+          this.setState({ operation: "" });
           break;
       }
     // } else {
