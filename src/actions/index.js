@@ -1,5 +1,5 @@
 export function selectNum(num) {
-  console.log(num);
+  // console.log(num);
   return {
     type: 'NUM_SELECTED',
     payload: num
@@ -7,7 +7,7 @@ export function selectNum(num) {
 }
 
 export function selectOperation(operation, currentNumber, previousNumber) {
-  console.log(operation);
+  // console.log(operation);
 
   return {
     type: 'OPERATION_SELECTED',

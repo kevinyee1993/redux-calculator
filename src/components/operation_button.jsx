@@ -6,7 +6,7 @@ export default class OperationButton extends Component {
     super(props);
 
     // thinking about using this to keep track of the numbers
-    this.state = { currentNumber: "", previousNumber: "" };
+    this.state = { operation: "" };
   }
 
   // will return the new current number
@@ -16,8 +16,12 @@ export default class OperationButton extends Component {
 
     let prevToInt;
 
+    console.log("operation:" + operation);
+    console.log("prev:" + previousNumber);
+    console.log("curr:" + currentNumber);
 
-    if(previousNumber) {
+
+    if(parseInt(previousNumber)) {
       prevToInt = parseInt(previousNumber);
     } else {
       // prevToInt = 0;
@@ -29,7 +33,7 @@ export default class OperationButton extends Component {
     let currToInt = parseInt(currentNumber);
     let answer;
 
-    if(prevToInt) {
+    // if(prevToInt) {
       switch(operation) {
         case '+':
           answer = (prevToInt + currToInt).toString();
@@ -44,13 +48,14 @@ export default class OperationButton extends Component {
           answer = (prevToInt * currToInt).toString();
           break;
         case '=':
+          // answer = "big farter";
           answer = currToInt.toString();
           break;
       }
-    } else {
-      // console.log(prevToInt + currToInt);
-      return currToInt.toString();
-    }
+    // } else {
+    //   // console.log(prevToInt + currToInt);
+    //   return currToInt.toString();
+    // }
 
     return ["0", answer];
   }
@@ -69,9 +74,12 @@ export default class OperationButton extends Component {
       toggleClass = 'button';
     }
 
+    // console.log("previous number:" + this.props.previousNumber);
+    // console.log("current number:" + this.props.currentNumber);
+
     [updatedPrevValue, updatedCurrValue] = this.calculate(this.props.previousNumber,
       this.props.currentNumber,
-      this.props.operation);
+      this.props.value);
 
     return(
       <div className={ toggleClass }
